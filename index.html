@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR CodeGen</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+   
+    <div class="container"> <p> <font color="white">Aditya's QR Code Generator</font></text></p> 
+        <div id="dj">
+            <img src="" id="qrimg">
+        </div>
+
+        <input type="text" placeholder="Plese Enter Text or URL" id="qrtext">
+        <button onclick="qrgenerator()">Generate QR Code Now</button>
+    
+    </div>
+
+    <script>
+
+        let dj=document.getElementById("dj");
+        let qrimg=document.getElementById("qrimg");
+        let qrtext=document.getElementById("qrtext");
+        function qrgenerator()
+        {qrimg.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrtext.value;
+        dj.classList.add("qrimg");
+
+        }
+
+
+    </script>
+</body>
+</html>
